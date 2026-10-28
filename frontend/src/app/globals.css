@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-orange: #eb5406;
+    --brand-orange-hover: #d44800;
+    --brand-orange-light: #fff3ed;
+    --brand-dark: #121820;
+    --brand-navy: #0b1119;
+    --brand-cream: #faf9f6;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  ::selection {
+    background-color: #eb5406;
+    color: #ffffff;
+  }
+}
+
+/* Custom Serif font utility for hero accents */
+.font-serif-accent {
+  font-family: "Georgia", "Cambria", "Times New Roman", serif;
+  font-style: italic;
+}
+
+/* Pulse animation for medical radar circles */
+@keyframes radar-pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.animate-radar {
+  animation: radar-pulse 6s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #eb5406;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c84400;
+}
+
+/* Hide scrollbars cleanly */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Continuous infinite reel scrolling from right to left */
+@keyframes teamReelScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-team-reel {
+  display: flex;
+  width: max-content;
+  animation: teamReelScroll 22s linear infinite;
+  will-change: transform;
+}
+
+.animate-team-reel:hover,
+.animate-team-reel:active {
+  animation-play-state: paused;
+}
+
+/* Fluid Shimmer Wave for Skeleton Loading */
+@keyframes shimmerWave {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    #f1f3f6 0%,
+    #e2e6eb 30%,
+    #f8f9fa 50%,
+    #e2e6eb 70%,
+    #f1f3f6 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmerWave 1.6s ease-in-out infinite;
+}
+
+.skeleton-shimmer-dark {
+  background: linear-gradient(
+    90deg,
+    #0f1722 0%,
+    #182333 30%,
+    #233044 50%,
+    #182333 70%,
+    #0f1722 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmerWave 1.6s ease-in-out infinite;
+}
+
