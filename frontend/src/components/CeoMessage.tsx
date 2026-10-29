@@ -134,7 +134,7 @@ export default function CeoMessage() {
     <section
       id="leadership"
       ref={sectionRef}
-      className="relative w-full min-h-[calc(100vh-62px)] py-12 lg:py-16 bg-[#faf9f6] text-gray-900 border-b border-gray-200 scroll-mt-[62px] flex flex-col justify-center overflow-hidden isolate"
+      className="relative w-full min-h-[calc(100vh-62px)] pt-12 lg:pt-14 pb-8 lg:pb-10 bg-[#faf9f6] text-gray-900 border-b border-gray-200 scroll-mt-[62px] flex flex-col justify-center overflow-hidden isolate"
     >
       {/* Decorative Brand Orange Monotone Shape (Contained strictly within section) */}
       <div

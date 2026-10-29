@@ -46,14 +46,14 @@ export default function ReturnPolicy() {
   return (
     <section
       id="return-policy"
-      className="relative w-full py-16 sm:py-20 lg:py-24 bg-white text-gray-900 border-b border-gray-200 scroll-mt-[62px] isolate"
+      className="relative w-full pt-2.5 sm:pt-3.5 lg:pt-4 pb-8 sm:pb-10 lg:pb-12 bg-white text-gray-900 border-b border-gray-200 scroll-mt-[62px] isolate"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* ================================================== */}
         {/* Section Header */}
         {/* ================================================== */}
-        <div className="mb-8 lg:mb-10">
-          <div className="inline-flex items-center gap-2 mb-2">
+        <div className="mb-4 lg:mb-5">
+          <div className="inline-flex items-center gap-2 mb-1.5">
             <span className="w-6 h-[2px] bg-[#eb5406]"></span>
             <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] text-[#eb5406] uppercase font-mono">
               Pharmacy Guidelines
@@ -62,7 +62,7 @@ export default function ReturnPolicy() {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-black text-gray-900 tracking-tight leading-tight">
             Return &amp; Exchange Policy
           </h2>
-          <p className="text-gray-500 text-xs sm:text-sm mt-1.5 max-w-none md:whitespace-nowrap">
+          <p className="text-gray-500 text-xs sm:text-sm mt-1 max-w-none md:whitespace-nowrap">
             Strict adherence to DRAP standards ensuring cold-chain integrity, authentic stock, and patient health safety.
           </p>
         </div>
