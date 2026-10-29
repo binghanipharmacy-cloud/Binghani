@@ -59,7 +59,7 @@ const securityHeaders = [
 const isExport = process.env.NEXT_EXPORT === "true";
 
 const nextConfig: NextConfig = {
-  ...(isExport ? { output: "export" as const } : {}),
+  ...(isExport ? { output: "export" as const, trailingSlash: true } : {}),
 
   // 1. Enable Brotli / Gzip compression for all rendered pages, CSS, JS and payloads
   compress: true,
