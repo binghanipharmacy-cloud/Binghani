@@ -6,7 +6,6 @@ import Navbar from "@/components/Navbar";
 import MainHeroSlider from "@/components/MainHeroSlider";
 import WhoWeAre from "@/components/WhoWeAre";
 import LandingPage from "@/components/LandingPage";
-import PageSkeleton from "@/components/PageSkeleton";
 import Footer from "@/components/Footer";
 
 // ─── PERFORMANCE CODE-SPLITTING: Below-the-fold dynamic chunks ────────────────
@@ -20,7 +19,6 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   const [hasExplored, setHasExplored] = useState(false);
-  const [isLoadingSkeleton, setIsLoadingSkeleton] = useState(false);
 
   useEffect(() => {
     if (!hasExplored) {
@@ -33,14 +31,9 @@ export default function Home() {
     };
   }, [hasExplored]);
 
-  // Handle user clicking Explore: triggers 2-second skeleton loading state before revealing content
+  // Handle user clicking Explore: immediately reveals main page without loader delay
   const handleExplore = () => {
     setHasExplored(true);
-    setIsLoadingSkeleton(true);
-
-    setTimeout(() => {
-      setIsLoadingSkeleton(false);
-    }, 2000);
   };
 
   return (
@@ -50,20 +43,13 @@ export default function Home() {
         <LandingPage onExplore={handleExplore} />
       )}
 
-      {/* 2-Second Skeleton Loader displayed immediately when Explore is clicked */}
-      {isLoadingSkeleton && <PageSkeleton />}
-
-      {/* Main Website Content - Smoothly fades in once 2s skeleton completes */}
-      <div
-        className={`flex flex-col transition-opacity duration-700 ${
-          isLoadingSkeleton ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
-        }`}
-      >
+      {/* Main Website Content - Revealed directly without loading delay */}
+      <div className="flex flex-col">
         {/* Main Navigation Bar with Logo and Links */}
         <Navbar />
 
         {/* 1. Main Hero Slider with smooth auto-scrolling images and GSAP text */}
-        <MainHeroSlider isActive={hasExplored && !isLoadingSkeleton} />
+        <MainHeroSlider isActive={hasExplored} />
 
         {/* 2. Who We Are Section */}
         <WhoWeAre />

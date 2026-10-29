@@ -139,11 +139,15 @@ export const metadata: Metadata = {
     },
   },
 
-  // Icons & Touch Devices
+  // Icons & Touch Devices - Bin Ghani Pharmacy Logo Favicons
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+      { url: "/logo.png", type: "image/png" },
+    ],
     shortcut: "/favicon.ico",
-    apple: "/logo.png",
+    apple: "/apple-icon.png",
   },
 
   // Local SEO Geo & Regulatory Meta Tags
@@ -275,6 +279,11 @@ export default function RootLayout({
           href="/landing-storefront-exterior.jpg?v=5"
           fetchPriority="high"
         />
+
+        {/* Bin Ghani Pharmacy Logo Favicons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon.png" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
 
         {/* Google Rich Snippet Structured Data (JSON-LD) */}
         <script
