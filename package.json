@@ -11,6 +11,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:export": "node -e \"process.env.NEXT_EXPORT='true'; require('child_process').execSync('npx next build', {stdio: 'inherit', env: {...process.env, NEXT_EXPORT: 'true'}})\"",
+    "deploy": "node deploy-gh-pages.js",
     "start": "next start",
     "start:server": "node server.js",
     "lint": "eslint",
