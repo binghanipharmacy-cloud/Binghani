@@ -8,7 +8,7 @@ console.log("🚀 Building optimized production export for Hostinger...");
 process.env.NEXT_EXPORT = "true";
 process.env.NEXT_PUBLIC_BASE_PATH = "";
 
-execSync("npx next build", {
+execSync("npx next build --webpack", {
   stdio: "inherit",
   env: {
     ...process.env,
