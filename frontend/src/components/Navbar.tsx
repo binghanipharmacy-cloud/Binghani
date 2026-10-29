@@ -7,6 +7,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
+    { name: "Home", href: "#" },
     { name: "About", href: "#about" },
     { name: "Mission", href: "#mission" },
     { name: "Products", href: "#products" },
@@ -17,8 +18,13 @@ export default function Navbar() {
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    if (href === "#" || href === "") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.dispatchEvent(new CustomEvent("resetHeroSlider"));
+      return;
+    }
     if (href.startsWith("#")) {
-      e.preventDefault();
       const el = document.querySelector(href);
       if (el) {
         const navHeight = 62;
@@ -35,8 +41,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-40 h-[62px] bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all flex items-center">
-      <div className="w-full px-4 sm:px-8 lg:px-12 py-2 flex items-center justify-between">
+    <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all">
+      <div className="w-full h-[62px] px-4 sm:px-8 lg:px-12 flex items-center justify-between">
         {/* Brand Logo with White Background Container */}
         <a href="#" onClick={handleLogoClick} className="flex items-center gap-3 group">
           <div className="w-10 h-10 bg-white rounded-lg p-1 flex items-center justify-center border border-gray-200/80 shadow-xs transition-transform duration-200 group-hover:scale-105 shrink-0">
@@ -58,7 +64,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-5 xl:gap-6">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -75,6 +81,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center">
           <a
             href="#contact"
+            onClick={(e) => handleNavClick(e, "#contact")}
             className="inline-flex items-center justify-center px-4 py-1.5 text-xs sm:text-sm font-semibold text-white bg-[#eb5406] hover:bg-[#d44800] rounded shadow-xs transition-colors"
           >
             Contact Us
@@ -93,10 +100,19 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile dropdown menu */}
+      {/* Mobile backdrop overlay */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-gray-200 px-6 py-4 shadow-xl">
-          <div className="flex flex-col space-y-3">
+        <div
+          className="fixed inset-0 top-[62px] bg-black/40 backdrop-blur-xs z-40 lg:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Mobile full-width dropdown menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden absolute top-[62px] left-0 w-full bg-white border-b border-gray-200 shadow-2xl z-50 max-h-[calc(100vh-62px)] overflow-y-auto">
+          <div className="px-5 py-3 flex flex-col divide-y divide-gray-100">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -105,20 +121,29 @@ export default function Navbar() {
                   setMobileMenuOpen(false);
                   handleNavClick(e, link.href);
                 }}
-                className="text-base font-medium text-gray-800 hover:text-[#eb5406] py-1 border-b border-gray-50"
+                className="flex items-center justify-between py-3 text-[15px] font-semibold text-gray-800 hover:text-[#eb5406] active:text-[#eb5406] transition-colors"
               >
-                {link.name}
+                <span>{link.name}</span>
+                <span className="text-gray-300 text-xs font-mono">→</span>
               </a>
             ))}
-            <div className="pt-2 flex flex-col gap-2">
-              <a
-                href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 py-2.5 px-4 text-sm font-semibold text-white bg-[#eb5406] rounded-md shadow-sm"
-              >
-                <PhoneCall className="w-4 h-4" />
-                Contact Us
-              </a>
+          </div>
+
+          <div className="p-4 bg-[#faf9f6] border-t border-gray-100 flex flex-col gap-2.5">
+            <a
+              href="#contact"
+              onClick={(e) => {
+                setMobileMenuOpen(false);
+                handleNavClick(e, "#contact");
+              }}
+              className="w-full flex items-center justify-center gap-2 py-3 px-4 text-sm font-bold text-white bg-[#eb5406] hover:bg-[#d44800] rounded-lg shadow-md active:scale-[0.99] transition-all"
+            >
+              <PhoneCall className="w-4 h-4" />
+              <span>Contact Us</span>
+            </a>
+            <div className="flex items-center justify-between text-[11px] text-gray-500 font-mono px-1">
+              <span>Bin Ghani Pharmacy</span>
+              <span className="text-[#eb5406] font-semibold">Open Daily 9 AM - 2 AM</span>
             </div>
           </div>
         </div>
