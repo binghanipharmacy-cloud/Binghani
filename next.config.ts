@@ -56,7 +56,11 @@ const securityHeaders = [
   },
 ];
 
+const isExport = process.env.NEXT_EXPORT === "true";
+
 const nextConfig: NextConfig = {
+  ...(isExport ? { output: "export" as const } : {}),
+
   // 1. Enable Brotli / Gzip compression for all rendered pages, CSS, JS and payloads
   compress: true,
 
@@ -64,31 +68,37 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
 
   // 3. Image optimization & long-term edge caching
-  images: {
-    formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
-  },
+  images: isExport
+    ? { unoptimized: true }
+    : {
+        formats: ["image/avif", "image/webp"],
+        minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
+      },
 
-  // 4. Comprehensive Cyber Security & Caching Headers
-  async headers() {
-    return [
-      // Apply security headers to all routes
-      {
-        source: "/:path*",
-        headers: securityHeaders,
-      },
-      // Static media edge caching
-      {
-        source: "/:all*(svg|jpg|jpeg|png|webp|avif|ico|woff2)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-    ];
-  },
+  // 4. Comprehensive Cyber Security & Caching Headers (for Node.js runtime)
+  ...(isExport
+    ? {}
+    : {
+        async headers() {
+          return [
+            // Apply security headers to all routes
+            {
+              source: "/:path*",
+              headers: securityHeaders,
+            },
+            // Static media edge caching
+            {
+              source: "/:all*(svg|jpg|jpeg|png|webp|avif|ico|woff2)",
+              headers: [
+                {
+                  key: "Cache-Control",
+                  value: "public, max-age=31536000, immutable",
+                },
+              ],
+            },
+          ];
+        },
+      }),
 
   turbopack: {
     rules: {
