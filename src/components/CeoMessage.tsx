@@ -134,11 +134,11 @@ export default function CeoMessage() {
     <section
       id="leadership"
       ref={sectionRef}
-      className="relative w-full lg:h-[calc(100vh-62px)] py-10 lg:py-0 bg-[#faf9f6] text-gray-900 border-b border-gray-200 scroll-mt-[62px] flex flex-col justify-center overflow-hidden"
+      className="relative w-full min-h-[calc(100vh-62px)] py-12 lg:py-16 bg-[#faf9f6] text-gray-900 border-b border-gray-200 scroll-mt-[62px] flex flex-col justify-center overflow-hidden isolate"
     >
-      {/* Decorative Brand Orange Monotone Shape (Matching Reference Poster Style) */}
+      {/* Decorative Brand Orange Monotone Shape (Contained strictly within section) */}
       <div
-        className="absolute -bottom-12 -right-12 w-[65%] sm:w-[50%] lg:w-[44%] h-[55%] sm:h-[65%] lg:h-[70%] bg-gradient-to-tl from-[#d84800] to-[#eb5406] [clip-path:polygon(32%_0,100%_0,100%_100%,0_100%)] rounded-tl-[70px] sm:rounded-tl-[100px] pointer-events-none opacity-95 shadow-2xl"
+        className="absolute bottom-0 right-0 w-[65%] sm:w-[50%] lg:w-[44%] h-[55%] sm:h-[65%] lg:h-[70%] bg-gradient-to-tl from-[#d84800] to-[#eb5406] [clip-path:polygon(32%_0,100%_0,100%_100%,0_100%)] rounded-tl-[70px] sm:rounded-tl-[100px] pointer-events-none opacity-95 shadow-2xl"
         aria-hidden="true"
       />
 

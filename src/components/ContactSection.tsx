@@ -152,13 +152,13 @@ export default function ContactSection() {
 
 
   return (
-    <section id="contact" className="w-full scroll-mt-[62px]">
+    <section id="contact" className="w-full scroll-mt-[62px] relative isolate overflow-hidden">
 
 
       {/* ========================================================== */}
       <div
         ref={stageRef}
-        className="relative w-full overflow-hidden bg-white border-b border-gray-200 min-h-[calc(100vh-62px)] md:h-[calc(100vh-62px)] flex items-center justify-center select-none py-12 md:py-0"
+        className="relative w-full overflow-hidden bg-white border-b border-gray-200 min-h-[calc(100vh-62px)] md:h-[calc(100vh-62px)] flex items-center justify-center select-none py-12 md:py-0 isolate"
       >
         {/* -------------------------------------------------------- */}
         {/* REVEALED BASE LAYER: 3 Contact Options (Underneath)      */}
@@ -273,7 +273,7 @@ export default function ContactSection() {
           ref={fabricSvgRef}
           viewBox="0 0 1000 500"
           preserveAspectRatio="none"
-          className="absolute inset-0 w-full h-full pointer-events-none z-20 overflow-visible"
+          className="absolute inset-0 w-full h-full pointer-events-none z-20 overflow-hidden"
         >
           <defs>
             {/* Satin/Fabric Orange Gradient */}

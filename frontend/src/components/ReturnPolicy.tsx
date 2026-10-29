@@ -46,14 +46,14 @@ export default function ReturnPolicy() {
   return (
     <section
       id="return-policy"
-      className="relative w-full lg:h-[calc(100vh-62px)] py-12 lg:py-0 bg-white text-gray-900 border-b border-gray-100 scroll-mt-[62px] flex flex-col justify-center overflow-hidden"
+      className="relative w-full py-16 sm:py-20 lg:py-24 bg-white text-gray-900 border-b border-gray-200 scroll-mt-[62px] isolate"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-center py-4 lg:py-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* ================================================== */}
         {/* Section Header */}
         {/* ================================================== */}
-        <div className="mb-4 lg:mb-6">
-          <div className="inline-flex items-center gap-2 mb-1.5">
+        <div className="mb-8 lg:mb-10">
+          <div className="inline-flex items-center gap-2 mb-2">
             <span className="w-6 h-[2px] bg-[#eb5406]"></span>
             <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] text-[#eb5406] uppercase font-mono">
               Pharmacy Guidelines
@@ -62,7 +62,7 @@ export default function ReturnPolicy() {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-black text-gray-900 tracking-tight leading-tight">
             Return &amp; Exchange Policy
           </h2>
-          <p className="text-gray-500 text-xs sm:text-sm mt-1 max-w-none md:whitespace-nowrap">
+          <p className="text-gray-500 text-xs sm:text-sm mt-1.5 max-w-none md:whitespace-nowrap">
             Strict adherence to DRAP standards ensuring cold-chain integrity, authentic stock, and patient health safety.
           </p>
         </div>
@@ -70,15 +70,15 @@ export default function ReturnPolicy() {
         {/* ================================================== */}
         {/* Policy Cards: Exactly matching ProductsCatalog box styling */}
         {/* ================================================== */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4 lg:gap-5 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 items-stretch">
           {policies.map((policy) => (
             <div
               key={policy.id}
-              className="group relative bg-[#faf9f6] rounded-none p-4 sm:p-5 lg:p-5 xl:p-6 border border-gray-200 hover:border-[#eb5406]/80 hover:bg-white hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-out flex flex-col justify-between will-change-transform cursor-pointer"
+              className="group relative bg-[#faf9f6] rounded-none p-5 sm:p-6 lg:p-6 xl:p-7 border border-gray-200 hover:border-[#eb5406]/80 hover:bg-white hover:-translate-y-2 hover:shadow-xl transition-all duration-300 ease-out flex flex-col justify-between will-change-transform cursor-pointer"
             >
               <div>
                 {/* Title & Tagline */}
-                <h3 className="font-serif text-base sm:text-lg lg:text-[17px] xl:text-[19px] font-bold text-gray-900 group-hover:text-[#eb5406] transition-colors leading-snug">
+                <h3 className="font-serif text-base sm:text-lg lg:text-[18px] xl:text-[20px] font-bold text-gray-900 group-hover:text-[#eb5406] transition-colors leading-snug">
                   {policy.title}
                 </h3>
                 <p className="text-[11px] sm:text-xs text-[#eb5406] font-medium mt-1 leading-tight">
@@ -86,7 +86,7 @@ export default function ReturnPolicy() {
                 </p>
 
                 {/* Core Rule Box */}
-                <div className="mt-3 p-3 bg-white border border-gray-200/80 border-l-2 border-l-[#eb5406] text-xs font-semibold text-gray-800 leading-snug">
+                <div className="mt-3.5 p-3 bg-white border border-gray-200/90 border-l-3 border-l-[#eb5406] text-xs sm:text-[13px] font-semibold text-gray-800 leading-snug shadow-2xs">
                   {policy.rule}
                 </div>
 
@@ -104,7 +104,7 @@ export default function ReturnPolicy() {
               </div>
 
               {/* Box Footer Status */}
-              <div className="mt-4 pt-3 border-t border-gray-200/60 flex items-center justify-between text-[11px] text-gray-400 font-mono">
+              <div className="mt-5 pt-3.5 border-t border-gray-200/60 flex items-center justify-between text-[11px] text-gray-400 font-mono">
                 <span className="text-gray-500 font-medium">Bin Ghani Standard</span>
                 <span className="text-[#eb5406] font-semibold">Strict Protocol</span>
               </div>
@@ -115,10 +115,10 @@ export default function ReturnPolicy() {
         {/* ================================================== */}
         {/* Bottom Advisory Strip */}
         {/* ================================================== */}
-        <div className="mt-4 lg:mt-5 p-3 rounded-none bg-[#faf9f6] border border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-600">
-          <div className="flex items-center gap-2">
+        <div className="mt-6 lg:mt-8 p-3.5 sm:p-4 rounded-none bg-[#faf9f6] border border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-600">
+          <div className="flex items-center gap-2.5">
             <ShieldCheck className="w-4 h-4 text-[#eb5406] shrink-0" />
-            <span className="text-[11px] sm:text-xs">
+            <span className="text-xs sm:text-sm">
               <strong className="text-gray-900">Patient Protection:</strong> These regulations prevent counterfeit re-entry, cross-contamination, and degraded storage potency.
             </span>
           </div>
@@ -127,7 +127,7 @@ export default function ReturnPolicy() {
               href="https://wa.me/923322022221?text=Hello%20Bin%20Ghani%20Pharmacy,%20I%20have%20an%20inquiry%20regarding%20my%20recent%20bill."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-[#eb5406] hover:underline"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#eb5406] hover:underline"
             >
               <PhoneCall className="w-3.5 h-3.5 text-[#25D366]" />
               <span>Inquire via WhatsApp</span>
