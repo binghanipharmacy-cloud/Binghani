@@ -14,6 +14,7 @@ const MissionValues = dynamic(() => import("@/components/MissionValues"), { ssr:
 const ProductsCatalog = dynamic(() => import("@/components/ProductsCatalog"), { ssr: true });
 const LicensedPharmacist = dynamic(() => import("@/components/LicensedPharmacist"), { ssr: true });
 const CeoMessage = dynamic(() => import("@/components/CeoMessage"), { ssr: true });
+const ReturnPolicy = dynamic(() => import("@/components/ReturnPolicy"), { ssr: true });
 const ContactSection = dynamic(() => import("@/components/ContactSection"), { ssr: true });
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -79,10 +80,13 @@ export default function Home() {
         {/* 6. Message from the Founder & CEO */}
         <CeoMessage />
 
-        {/* 7. Contact Section & FAQs */}
+        {/* 7. Return & Exchange Policy */}
+        <ReturnPolicy />
+
+        {/* 8. Contact Section & FAQs */}
         <ContactSection />
 
-        {/* 8. Footer */}
+        {/* 9. Footer */}
         <Footer />
 
         {/* 9. Floating WhatsApp Live Chat Support at Bottom-Right */}

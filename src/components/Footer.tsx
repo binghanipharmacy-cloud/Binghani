@@ -22,6 +22,7 @@ export default function Footer() {
     { name: "Our Products", href: "#products" },
     { name: "Our Team", href: "#team" },
     { name: "Leadership", href: "#leadership" },
+    { name: "Return Policy", href: "#return-policy" },
     { name: "Contact Us", href: "#contact" },
   ];
 

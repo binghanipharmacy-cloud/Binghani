@@ -12,6 +12,7 @@ export default function Navbar() {
     { name: "Products", href: "#products" },
     { name: "Our Team", href: "#team" },
     { name: "Leadership", href: "#leadership" },
+    { name: "Return Policy", href: "#return-policy" },
     { name: "Contact", href: "#contact" },
   ];
 
