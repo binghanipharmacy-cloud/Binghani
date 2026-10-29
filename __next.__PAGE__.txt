@@ -1,0 +1,50 @@
+2:"$Sreact.fragment"
+3:"/Binghani/_next/static/chunks/0umf92h1sb77c.js"
+4:I[47257,["$3"],"ClientPageRoot"]
+5:"/Binghani/_next/static/chunks/18hpue3u37k_w.js"
+6:"/Binghani/_next/static/chunks/3m3q23c7ogf3r.js"
+7:"/Binghani/_next/static/chunks/0i6az4uuqhxa8.js"
+8:I[52683,["$3","$5","$6","$7"],"default"]
+b:I[97367,["$3"],"OutletBoundary"]
+c:"$Sreact.suspense"
+10:"ViewportBoundary"
+11:I[97367,["$3"],"$10"]
+12:"MetadataBoundary"
+13:I[97367,["$3"],"$12"]
+f:X
+1:[["children",{"s":"__PAGE__","h":128,"d":{"r":["$","$2","c",{"children":[["$","$L4",null,{"Component":"$8","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@9","$@a"]}}],[["$","script","script-0",{"src":"/Binghani/_next/static/chunks/18hpue3u37k_w.js","async":true}],["$","script","script-1",{"src":"/Binghani/_next/static/chunks/3m3q23c7ogf3r.js","async":true}],["$","script","script-2",{"src":"/Binghani/_next/static/chunks/0i6az4uuqhxa8.js","async":true}]],["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]]}],"p":"$@e","v":null,"s":"$f"}}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L11",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5"}],["$","meta","2",{"name":"theme-color","content":"#eb5406","media":"(prefers-color-scheme: light)"}],["$","meta","3",{"name":"theme-color","content":"#101720","media":"(prefers-color-scheme: dark)"}],["$","meta","4",{"name":"color-scheme","content":"light dark"}]]}],["$","$L13",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Bin Ghani Pharmacy | Licensed Drug Dispensary & Community Healthcare"}],["$","meta","1",{"name":"description","content":"Bin Ghani Pharmacy - Government-licensed community drug dispensary (Lic: 6777-A/2021). 100% genuine allopathic medicines, certified clinical pharmacists, precision cold-chain storage, and heritage healthcare. Open 365 days, 9:00 AM – 2:00 AM."}],["$","meta","2",{"name":"application-name","content":"Bin Ghani Pharmacy"}],["$","link","3",{"rel":"author","href":"https://binghanipharmacy.com"}],["$","meta","4",{"name":"author","content":"Bin Ghani Pharmacy"}],["$","link","5",{"rel":"author","href":"https://binghanipharmacy.com/#leadership"}],["$","meta","6",{"name":"author","content":"Muhammad Ghani - Founder & CEO"}],["$","meta","7",{"name":"generator","content":"Next.js"}],["$","meta","8",{"name":"keywords","content":"Bin Ghani Pharmacy,Licensed Pharmacy Pakistan,Licensed Drug Dispensary 6777-A/2021,Genuine Medicines,Clinical Pharmacist Consultation,Cold Chain Storage Pharmacy,Allopathic Medicines,Prescription Drugs Dispensary,Medication Therapy Management,Elderly Dose Packaging,Pediatric Dosing Scaler,Surgical Equipment Supplies,Emergency First Aid Kits,Medical Electronic Devices,Pharmacy Open Till 2 AM,Peshawar Pharmacy,DRAP Approved Medicines,Bin Ghani Healthcare"}],["$","meta","9",{"name":"referrer","content":"origin-when-cross-origin"}],["$","meta","10",{"name":"creator","content":"Muhammad Ghani"}],["$","meta","11",{"name":"publisher","content":"Bin Ghani Pharmacy"}],["$","meta","12",{"name":"robots","content":"index, follow"}],["$","meta","13",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","14",{"name":"category","content":"Health & Pharmaceuticals"}],["$","meta","15",{"name":"geo.region","content":"PK-KP"}],["$","meta","16",{"name":"geo.placename","content":"Peshawar, Khyber Pakhtunkhwa, Pakistan"}],["$","meta","17",{"name":"geo.position","content":"34.0151;71.5249"}],["$","meta","18",{"name":"ICBM","content":"34.0151, 71.5249"}],["$","meta","19",{"name":"format-detection","content":"telephone=yes, address=yes, email=yes"}],["$","meta","20",{"name":"business:contact_data:phone_number","content":"+923322022221"}],["$","meta","21",{"name":"business:contact_data:email","content":"binghanipharmacy@gmail.com"}],["$","meta","22",{"name":"business:contact_data:license","content":"Drug Dispensary Lic. 6777-A/2021"}],["$","meta","23",{"name":"business:contact_data:tax_id","content":"NTN: 1730127706629"}],["$","meta","24",{"name":"rating","content":"General"}],["$","meta","25",{"name":"revisit-after","content":"3 days"}],["$","link","26",{"rel":"canonical","href":"https://binghanipharmacy.com/"}],["$","link","27",{"rel":"alternate","hrefLang":"en-PK","href":"https://binghanipharmacy.com/"}],["$","link","28",{"rel":"alternate","hrefLang":"ur-PK","href":"https://binghanipharmacy.com/"}],["$","link","29",{"rel":"alternate","hrefLang":"x-default","href":"https://binghanipharmacy.com/"}],["$","meta","30",{"property":"og:title","content":"Bin Ghani Pharmacy | Licensed Drug Dispensary & Community Healthcare"}],["$","meta","31",{"property":"og:description","content":"Your trusted community dispensary in Peshawar. 100% genuine DRAP-approved medicines, licensed clinical pharmacists, and open 365 days a year from 9:00 AM to 2:00 AM."}],["$","meta","32",{"property":"og:url","content":"https://binghanipharmacy.com/"}],["$","meta","33",{"property":"og:site_name","content":"Bin Ghani Pharmacy"}],"$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20","$L21","$L22","$L23","$L24","$L25","$L26","$L27","$L28","$L29","$L2a"]}]}],null]}],"$L2b"]}],"p":"$@2c","v":null,"s":"$f"}},"a":"$@2d","u":"$@2e","b":"cZcuK6jBNo-mPTp6yU42B"}
+2f:I[27201,["$3"],"IconMark"]
+9:{}
+a:"$1:0:1:d:r:props:children:0:props:serverProvidedParams:params"
+d:null
+14:["$","meta","34",{"property":"og:locale","content":"en_PK"}]
+15:["$","meta","35",{"property":"og:image","content":"https://binghanipharmacy.com/landing-storefront-exterior-hd.jpg"}]
+16:["$","meta","36",{"property":"og:image:type","content":"image/jpeg"}]
+17:["$","meta","37",{"property":"og:image:width","content":"1200"}]
+18:["$","meta","38",{"property":"og:image:height","content":"630"}]
+19:["$","meta","39",{"property":"og:image:alt","content":"Bin Ghani Pharmacy Storefront Exterior & Illuminated Signage"}]
+1a:["$","meta","40",{"property":"og:image","content":"https://binghanipharmacy.com/logo.png"}]
+1b:["$","meta","41",{"property":"og:image:type","content":"image/png"}]
+1c:["$","meta","42",{"property":"og:image:width","content":"512"}]
+1d:["$","meta","43",{"property":"og:image:height","content":"512"}]
+1e:["$","meta","44",{"property":"og:image:alt","content":"Bin Ghani Pharmacy Official Logo"}]
+1f:["$","meta","45",{"property":"og:type","content":"website"}]
+20:["$","meta","46",{"name":"twitter:card","content":"summary_large_image"}]
+21:["$","meta","47",{"name":"twitter:creator","content":"@BinGhaniRx"}]
+22:["$","meta","48",{"name":"twitter:title","content":"Bin Ghani Pharmacy | Licensed Drug Dispensary"}]
+23:["$","meta","49",{"name":"twitter:description","content":"100% genuine medicines, precision cold-chain storage, and certified clinical pharmacists. Open daily 9 AM - 2 AM."}]
+24:["$","meta","50",{"name":"twitter:image","content":"https://binghanipharmacy.com/landing-storefront-exterior-hd.jpg"}]
+25:["$","link","51",{"rel":"shortcut icon","href":"/favicon.ico"}]
+26:["$","link","52",{"rel":"icon","href":"/favicon.ico","sizes":"any"}]
+27:["$","link","53",{"rel":"icon","href":"/icon.png","type":"image/png","sizes":"32x32"}]
+28:["$","link","54",{"rel":"icon","href":"/logo.png","type":"image/png"}]
+29:["$","link","55",{"rel":"apple-touch-icon","href":"/apple-icon.png"}]
+2a:["$","$L2f","56",{}]
+2b:["$","meta",null,{"name":"next-size-adjust","content":""}]
+2e:true
+f:300
+f:C
+2d:0
+e:"$undefined"
+2c:"$undefined"

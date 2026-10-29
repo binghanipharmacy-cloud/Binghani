@@ -1,0 +1,6 @@
+:HL["/Binghani/_next/static/chunks/3p7fwp0mgkwi1.css","style"]
+:HL["/landing-storefront-exterior.jpg?v=5","image",{"fetchPriority":"high"}]
+:HL["/logo.png","image"]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"/_not-found","h":64,"c":"$Q2"}]]
+0:{"b":"cZcuK6jBNo-mPTp6yU42B","t":{"t":{"s":"","h":16,"c":"$Q1"}}}

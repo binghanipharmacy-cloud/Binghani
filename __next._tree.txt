@@ -1,0 +1,8 @@
+:HL["/Binghani/_next/static/chunks/3p7fwp0mgkwi1.css","style"]
+:HL["/Binghani/_next/static/media/2a65768255d6b625-s.p.3u4lli0-axodc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Binghani/_next/static/media/406d3fc8d5ec9f59-s.p.0mnr43et3sf34.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Binghani/_next/static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/landing-storefront-exterior.jpg?v=5","image",{"fetchPriority":"high"}]
+:HL["/logo.png","image"]
+1:[["children",{"s":"__PAGE__","h":128}]]
+0:{"b":"cZcuK6jBNo-mPTp6yU42B","t":{"t":{"s":"","h":16,"c":"$Q1"}}}

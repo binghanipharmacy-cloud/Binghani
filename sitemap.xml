@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://binghanipharmacy.com/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://binghanipharmacy.com/landing-storefront-exterior-hd.jpg</image:loc>
+      <image:title>Bin Ghani Pharmacy - Illuminated Storefront Exterior</image:title>
+      <image:caption>Licensed community drug dispensary storefront in Peshawar, Pakistan</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://binghanipharmacy.com/logo.png</image:loc>
+      <image:title>Bin Ghani Pharmacy Official Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://binghanipharmacy.com/licensed-pharmacist.jpg</image:loc>
+      <image:title>Bin Ghani Pharmacy - Certified Clinical Pharmacist</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://binghanipharmacy.com/hero-interior-panoramic.jpg</image:loc>
+      <image:title>Bin Ghani Pharmacy - Cold Chain &amp; Interior Panoramic View</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://binghanipharmacy.com/#about</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://binghanipharmacy.com/#mission</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://binghanipharmacy.com/#products</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://binghanipharmacy.com/#team</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://binghanipharmacy.com/#leadership</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://binghanipharmacy.com/#contact</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
