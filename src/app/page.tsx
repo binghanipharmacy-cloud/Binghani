@@ -33,30 +33,38 @@ export default function Home() {
     };
   }, [hasExplored]);
 
-  // Handle user clicking Explore: shows pure layout shimmer skeleton without any loader writing
-  const handleExplore = () => {
-    setHasExplored(true);
+  // 1. Immediately when user clicks Explore, mount skeleton so it is directly underneath
+  const handleExploreStart = () => {
     setIsLoadingSkeleton(true);
+  };
 
+  // 2. When LandingPage exit animation completes, mark explored and keep skeleton for smooth feel
+  const handleExploreComplete = () => {
+    setHasExplored(true);
     setTimeout(() => {
       setIsLoadingSkeleton(false);
-    }, 1200);
+    }, 1100);
   };
 
   return (
     <main className="min-h-screen flex flex-col bg-white relative">
       {/* Landing Splash Page - Storefront Exterior Picture & Explore Button */}
       {!hasExplored && (
-        <LandingPage onExplore={handleExplore} />
+        <LandingPage
+          onExplore={handleExploreComplete}
+          onExploreStart={handleExploreStart}
+        />
       )}
 
       {/* Pure Layout Shimmer Skeleton (Without any loader text or writing) */}
       {isLoadingSkeleton && <PageSkeleton />}
 
-      {/* Main Website Content - Smoothly fades in as skeleton finishes */}
+      {/* Main Website Content - Hidden until skeleton finishes */}
       <div
         className={`flex flex-col transition-opacity duration-700 ${
-          isLoadingSkeleton ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
+          !hasExplored || isLoadingSkeleton
+            ? "opacity-0 pointer-events-none"
+            : "opacity-100 pointer-events-auto"
         }`}
       >
         {/* Main Navigation Bar with Logo and Links */}

@@ -6,9 +6,10 @@ import { ArrowRight } from "lucide-react";
 
 interface LandingPageProps {
   onExplore: () => void;
+  onExploreStart?: () => void;
 }
 
-export default function LandingPage({ onExplore }: LandingPageProps) {
+export default function LandingPage({ onExplore, onExploreStart }: LandingPageProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -96,6 +97,9 @@ export default function LandingPage({ onExplore }: LandingPageProps) {
   const handleExploreClick = () => {
     if (isExiting) return;
     setIsExiting(true);
+
+    // Immediately trigger skeleton before the exit animation begins
+    onExploreStart?.();
 
     if (containerRef.current) {
       const tl = gsap.timeline({

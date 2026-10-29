@@ -27,7 +27,7 @@ export default function MainHeroSlider({ isActive = true }: MainHeroSliderProps)
   const slides: SlideData[] = [
     {
       id: 1,
-      image: "/hero-interior-panoramic.jpg",
+      image: "/hero-interior-panoramic.jpg?v=2",
       badge: "Bin Ghani Healthcare • Community Dispensary",
       headline: "Always Here at Your Service for Your",
       highlight: "Health & Wellbeing.",
@@ -36,7 +36,7 @@ export default function MainHeroSlider({ isActive = true }: MainHeroSliderProps)
     },
     {
       id: 2,
-      image: "/hero-staff-counter.jpg",
+      image: "/hero-staff-counter.jpg?v=2",
       badge: "Expert Healthcare Team • Licensed Pharmacists",
       headline: "Knowledgeable, Caring & Highly",
       highlight: "Experienced Pharmacy Staff.",
@@ -45,7 +45,7 @@ export default function MainHeroSlider({ isActive = true }: MainHeroSliderProps)
     },
     {
       id: 3,
-      image: "/slide1.jpg",
+      image: "/slide1.jpg?v=2",
       badge: "Bin Ghani Healthcare • Specialized Care",
       headline: "Dedicated Clinical Support for",
       highlight: "Diabetic Patient Care.",
@@ -54,7 +54,7 @@ export default function MainHeroSlider({ isActive = true }: MainHeroSliderProps)
     },
     {
       id: 4,
-      image: "/slide2.jpg",
+      image: "/slide2.jpg?v=2",
       badge: "Mother & Baby Wellness",
       headline: "Complete Maternal &",
       highlight: "Premium Baby Care.",
@@ -63,7 +63,7 @@ export default function MainHeroSlider({ isActive = true }: MainHeroSliderProps)
     },
     {
       id: 5,
-      image: "/slide3.jpg",
+      image: "/slide3.jpg?v=2",
       badge: "Vitality & Nutritional Wellness",
       headline: "Targeted Multivitamins & Supplements for",
       highlight: "Men & Women's Wellbeing.",
@@ -72,7 +72,7 @@ export default function MainHeroSlider({ isActive = true }: MainHeroSliderProps)
     },
     {
       id: 6,
-      image: "/slide4.jpg",
+      image: "/slide4.jpg?v=2",
       badge: "Geriatric & Chronic Pain Support",
       headline: "Compassionate Elder Care &",
       highlight: "Pain & Bone Health.",
@@ -81,7 +81,7 @@ export default function MainHeroSlider({ isActive = true }: MainHeroSliderProps)
     },
     {
       id: 7,
-      image: "/slide5.jpg",
+      image: "/slide5.jpg?v=2",
       badge: "Clinical Equipment & Emergency Supplies",
       headline: "Certified Surgical Instruments &",
       highlight: "Emergency First Aid Kits.",
@@ -90,7 +90,7 @@ export default function MainHeroSlider({ isActive = true }: MainHeroSliderProps)
     },
     {
       id: 8,
-      image: "/slide6.jpg",
+      image: "/slide6.jpg?v=2",
       badge: "Personal Care & Daily Essentials",
       headline: "Premium Toiletries, Skincare &",
       highlight: "Personal Grooming Essentials.",
@@ -99,7 +99,7 @@ export default function MainHeroSlider({ isActive = true }: MainHeroSliderProps)
     },
     {
       id: 9,
-      image: "/slide7.jpg",
+      image: "/slide7.jpg?v=2",
       badge: "Maternal Comfort & Nursing Care",
       headline: "Comfortable Nursing &",
       highlight: "Mother's Feeding Essentials.",
@@ -190,7 +190,7 @@ export default function MainHeroSlider({ isActive = true }: MainHeroSliderProps)
     <section
       id="hero"
       ref={slideContainerRef}
-      className="relative w-full h-[calc(100dvh-60px)] min-h-[calc(100dvh-60px)] lg:h-[80vh] lg:min-h-[560px] lg:max-h-[720px] bg-[#0b1016] text-white overflow-hidden"
+      className="relative w-full h-[520px] sm:h-[600px] lg:h-[80vh] lg:min-h-[560px] lg:max-h-[720px] bg-[#0b1016] text-white overflow-hidden"
     >
       {/* Background Images */}
       {slides.map((slide, index) => {
@@ -202,23 +202,23 @@ export default function MainHeroSlider({ isActive = true }: MainHeroSliderProps)
               isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
             }`}
           >
-            {/* Background Image - clearly visible with object positioning */}
+            {/* Background Image - 2K HD with crisp contrast and high-DPI optimization */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={slide.image}
               alt={slide.headline}
               loading={index === 0 ? "eager" : "lazy"}
               decoding="async"
-              className={`w-full h-full object-cover ${
-                slide.image === "/hero-interior-panoramic.jpg" || slide.image === "/hero-staff-counter.jpg"
+              className={`w-full h-full object-cover brightness-[1.03] contrast-[1.06] [image-rendering:-webkit-optimize-contrast] ${
+                slide.image.includes("hero-interior-panoramic") || slide.image.includes("hero-staff-counter")
                   ? "object-center"
                   : "object-center md:object-right"
               }`}
             />
 
-            {/* Gradient Overlays: Darker on left for text readability, clear on right to showcase photo */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#070b0fe6] via-[#070b0fb3] to-transparent"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-[#070b0fe6] via-transparent to-black/30"></div>
+            {/* Gradient Overlays: Clear top-half on mobile so photos are sharp and bright, soft bottom fade for text legibility */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#070b0fe6] via-[#070b0f70] to-transparent sm:bg-gradient-to-r sm:from-[#070b0fe6] sm:via-[#070b0fb3] sm:to-transparent"></div>
+            <div className="hidden sm:block absolute inset-0 bg-gradient-to-t from-[#070b0fe6] via-transparent to-black/30"></div>
           </div>
         );
       })}
