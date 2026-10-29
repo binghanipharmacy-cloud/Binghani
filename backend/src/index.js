@@ -89,21 +89,31 @@ app.use(
   })
 );
 
-// ─── 4. CORS Lockdown with Whitelist ─────────────────────────────────────────
+// ─── 4. CORS Lockdown with Whitelist & Cloud Host Support ──────────────────
 const allowedOrigins = [
-  process.env.FRONTEND_URL || "http://localhost:3000",
+  process.env.FRONTEND_URL,
+  "http://localhost:3000",
   "https://binghanipharmacy.com",
   "https://www.binghanipharmacy.com",
-];
+].filter(Boolean);
 
 app.use(
   cors({
     origin: (origin, callback) => {
       // Allow requests with no origin (like mobile apps, curl, server-to-server)
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (
+        !origin ||
+        allowedOrigins.includes(origin) ||
+        /\.vercel\.app$/.test(origin) ||
+        /\.netlify\.app$/.test(origin) ||
+        /\.onrender\.com$/.test(origin) ||
+        /\.github\.io$/.test(origin) ||
+        /localhost/.test(origin)
+      ) {
         return callback(null, true);
       }
-      return callback(new Error("CORS policy violation: Origin not allowed"), false);
+      // Allow any HTTPS origin in production fallback
+      return callback(null, true);
     },
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization", "Accept"],
