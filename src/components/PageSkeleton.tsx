@@ -89,14 +89,6 @@ export default function PageSkeleton() {
           </div>
         </div>
       </div>
-
-      {/* ─── 4. FLOATING MICRO-STATUS CAPSULE ────────────────────────────────── */}
-      <div className="fixed bottom-6 inset-x-0 flex justify-center z-50 pointer-events-none">
-        <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-white shadow-2xl text-xs font-medium tracking-wide">
-          <span className="w-2 h-2 rounded-full bg-[#eb5406] animate-ping" />
-          <span>Loading Bin Ghani Dispensary...</span>
-        </div>
-      </div>
     </div>
   );
 }

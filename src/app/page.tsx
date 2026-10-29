@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import MainHeroSlider from "@/components/MainHeroSlider";
 import WhoWeAre from "@/components/WhoWeAre";
 import LandingPage from "@/components/LandingPage";
+import PageSkeleton from "@/components/PageSkeleton";
 import Footer from "@/components/Footer";
 
 // ─── PERFORMANCE CODE-SPLITTING: Below-the-fold dynamic chunks ────────────────
@@ -19,6 +20,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   const [hasExplored, setHasExplored] = useState(false);
+  const [isLoadingSkeleton, setIsLoadingSkeleton] = useState(false);
 
   useEffect(() => {
     if (!hasExplored) {
@@ -31,9 +33,14 @@ export default function Home() {
     };
   }, [hasExplored]);
 
-  // Handle user clicking Explore: immediately reveals main page without loader delay
+  // Handle user clicking Explore: shows pure layout shimmer skeleton without any loader writing
   const handleExplore = () => {
     setHasExplored(true);
+    setIsLoadingSkeleton(true);
+
+    setTimeout(() => {
+      setIsLoadingSkeleton(false);
+    }, 1200);
   };
 
   return (
@@ -43,13 +50,20 @@ export default function Home() {
         <LandingPage onExplore={handleExplore} />
       )}
 
-      {/* Main Website Content - Revealed directly without loading delay */}
-      <div className="flex flex-col">
+      {/* Pure Layout Shimmer Skeleton (Without any loader text or writing) */}
+      {isLoadingSkeleton && <PageSkeleton />}
+
+      {/* Main Website Content - Smoothly fades in as skeleton finishes */}
+      <div
+        className={`flex flex-col transition-opacity duration-700 ${
+          isLoadingSkeleton ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
+        }`}
+      >
         {/* Main Navigation Bar with Logo and Links */}
         <Navbar />
 
         {/* 1. Main Hero Slider with smooth auto-scrolling images and GSAP text */}
-        <MainHeroSlider isActive={hasExplored} />
+        <MainHeroSlider isActive={hasExplored && !isLoadingSkeleton} />
 
         {/* 2. Who We Are Section */}
         <WhoWeAre />
