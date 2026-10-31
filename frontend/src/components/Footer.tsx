@@ -67,7 +67,7 @@ export default function Footer() {
               </div>
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300 w-fit">
                 <FileText className="w-4 h-4 text-[#eb5406]" />
-                <span>NTN: <strong className="text-white font-semibold">1730127706629</strong></span>
+                <span>STRN: <strong className="text-white font-semibold">3277876378373</strong></span>
               </div>
             </div>
           </div>
