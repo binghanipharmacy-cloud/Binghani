@@ -130,7 +130,7 @@ export default function Footer() {
 
         {/* Regulatory Disclaimer */}
         <div className="p-4 rounded-xl bg-white/5 border border-white/5 text-[11px] text-gray-400 leading-relaxed mb-8">
-          <strong className="text-gray-300">Regulatory & Medical Notice:</strong> Bin Ghani Pharmacy operates strictly under the Drug Regulatory Authority of Pakistan (Drug License: <strong className="text-gray-200">6777-A/2021</strong> | NTN: <strong className="text-gray-200">1730127706629</strong>) and provincial health department laws. Prescription medications require a valid, non-expired doctor&apos;s prescription. Information provided on this website is for educational and communication purposes and should not substitute professional direct medical advice from your physician.
+          <strong className="text-gray-300">Regulatory & Medical Notice:</strong> Bin Ghani Pharmacy operates strictly under the Drug Regulatory Authority of Pakistan (Drug License: <strong className="text-gray-200">6777-A/2021</strong> | STRN: <strong className="text-gray-200">3277876378373</strong>) and provincial health department laws. Prescription medications require a valid, non-expired doctor&apos;s prescription. Information provided on this website is for educational and communication purposes and should not substitute professional direct medical advice from your physician.
         </div>
 
         {/* Bottom Bar */}
